@@ -64,6 +64,7 @@ void *thread_task(void *threadargs) {
    
     /* attack starts here */
     udp_port_attack(args->host, args->port); 
+    printf("port: %d\n", args->port);
 
     /*once process finishes it removes the thread*/
     pthread_mutex_lock(&lock);
